@@ -8,15 +8,17 @@ if hasattr(sys, 'setdefaultencoding'):
 
 
 # Django settings for treehole project.
-import os 
+import os
 
 DJANGO_ROOT_DIR = os.path.join(os.path.dirname(\
         os.path.realpath(__file__)), '..')
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '6ue@^pv4#42xyo-0@==9a0q41a(u9x04tf*udxyp)b)zd6$xl9'
+# SECRET_KEY = '6ue@^pv4#42xyo-0@==9a0q41a(u9x04tf*udxyp)b)zd6$xl9'
+SECRET_KEY = '7ue@^pv4#42xyo-0@==9a0q41a(u9x04tf*udxyp)b)zd6$xl9'
 
-PAGE_ID = '601677049'
+
+PAGE_ID = '601713239'
 COOKIE = os.path.join(DJANGO_ROOT_DIR, 'cookie.txt')
 LINKS = (
         (u'清华小生活', 'http://weibo.com/ithulife'), 

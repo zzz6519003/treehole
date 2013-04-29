@@ -27,7 +27,7 @@ def index(req):
         elif not (len(_content) < 120 and len(_content) > 5):
             messages.error(req, MSG['CONTENT_TOO_LONG'])
         elif ContentModel.objects.filter(ip=ipaddr, time__range=\
-                (datetime.now()-timedelta(minutes=30), datetime.now())).count() > 0:
+                (datetime.now()-timedelta(minutes=0), datetime.now())).count() > 0:
             messages.error(req, MSG['TOO_MANY_TIMES'])
         else:
             new_content = ContentModel(ip=ipaddr, 

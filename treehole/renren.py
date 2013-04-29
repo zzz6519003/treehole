@@ -67,6 +67,7 @@ class RenRen:
 
 
 if __name__ == '__main__':
-    r = RenRen('601677049')
+    # it's an error
+    r = RenRen('601713239')
     r.loginByCookie('cookie.txt')
     print r.postWallStatu(sys.argv[1], sys.argv[2])
