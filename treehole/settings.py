@@ -2,6 +2,7 @@
 # -*- coding=UTF-8 -*-
 # Created at Mar 20 19:19 by BlahGeek@Gmail.com
 import sys
+
 if hasattr(sys, 'setdefaultencoding'):
     sys.setdefaultencoding('UTF-8')
 
@@ -20,8 +21,8 @@ SECRET_KEY = '7ue@^pv4#42xyo-0@==9a0q41a(u9x04tf*udxyp)b)zd6$xl9'
 PAGE_ID = '601713239'
 COOKIE = os.path.join(DJANGO_ROOT_DIR, 'cookie.txt')
 LINKS = (
-        (u'清华小生活', 'http://weibo.com/ithulife'), 
-        ('My Blog', 'https://blog.blahgeek.com/'), 
+        (u'男哥', 'http://weibo.com/snowmanzzz'), 
+        ('真－作者', 'https://blog.blahgeek.com/'), 
     )
 
 
@@ -36,8 +37,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        # 'ENGINE': 'postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        # 'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
 
         'NAME': os.path.join(DJANGO_ROOT_DIR, 'main.db'),                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
@@ -182,9 +183,9 @@ LOGGING = {
         },
     }
 }
-# Parse database configuration from $DATABASE_URL
+Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
