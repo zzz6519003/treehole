@@ -14,6 +14,7 @@
 - 将A添加为公共主页的管理员
 - 在电脑隐身窗口登录A，切换至公共主页管理，记录下cookie写入`cookie.txt`
 - 直接关闭浏览器，从此不在浏览器上登录
+- cookie可以用chrome的dev tools的javascript console `document.cookie`获得
 
 另外，为防止cookie过期，需要定时刷页面，向`crontab`中加入
 `*/15 * * * * /path/to/manage.py refresh`，每15分钟刷新一次。
